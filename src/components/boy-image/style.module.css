@@ -16,3 +16,11 @@
   right: 37.4989%;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
+.personChanger {
+  position: absolute;
+  top: 5%;
+  left: 11%;
+  width: 58%;
+  bottom: 0;
+  height: 100%;
+}

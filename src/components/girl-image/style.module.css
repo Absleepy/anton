@@ -13,3 +13,14 @@
   left: 43.4999%;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
+.container img {
+  transition-delay: 0.01ms;
+}
+.personChanger {
+  position: absolute;
+  top: 0;
+  left: 22%;
+  width: 50%;
+  bottom: 0;
+  height: 100%;
+}

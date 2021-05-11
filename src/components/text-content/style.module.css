@@ -61,3 +61,23 @@
     font-size: 170px;
   }
 }
+@media (max-width: 1300px) {
+  .doingText {
+    font-size: 150px;
+  }
+}
+@media (max-width: 1024px) {
+  .doingText {
+    font-size: 95px;
+  }
+}
+@media (max-width: 767px) {
+  .doingText {
+    font-size: 75px;
+  }
+}
+@media (max-width: 479px) {
+  .doingText {
+    font-size: 50px;
+  }
+}

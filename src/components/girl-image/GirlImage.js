@@ -3,14 +3,12 @@ import style from "./style.module.css";
 const GirlImage = ({ url, handleGirlMouseOver, handleGirlMouseLeave }) => {
   return (
     <div className={style.container}>
-      <img
+      <img src={url} alt="Girl" width="100%" height="auto" />
+      <div
         onMouseLeave={handleGirlMouseLeave}
         onMouseOver={handleGirlMouseOver}
-        src={url}
-        alt="Girl"
-        width="100%"
-        height="auto"
-      />
+        className={style.personChanger}
+      ></div>
     </div>
   );
 };
