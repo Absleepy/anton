@@ -19,6 +19,9 @@
   letter-spacing: -0.05em;
   font-size: 60px;
   color: #fff;
+  opacity: 0.6;
+  transform: scale(0.99, 0.99);
+  transition: all 0.4s ease-in-out;
 }
 
 .whatWeDoing {
@@ -30,6 +33,9 @@
   font-weight: 700;
   text-align: center;
   color: #fff;
+  opacity: 0.6;
+  transform: scale(0.99, 0.99);
+  transition: all 0.4s ease-in-out;
 }
 .whatWeDoing::after {
   position: absolute;
@@ -39,7 +45,7 @@
   background: rgb(255, 255, 255);
   width: 120px;
   margin-left: -60px;
-  content: "";
+  content: '';
 }
 .doingStuff {
   position: relative;
@@ -55,7 +61,16 @@
   letter-spacing: -0.055em;
   color: #fff;
   text-align: center;
+  opacity: 0.6;
+  transform: scale(0.99, 0.99);
+  transition: all 0.3s ease;
 }
+
+.inCenter {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
 @media (max-width: 1500px) {
   .doingText {
     font-size: 170px;

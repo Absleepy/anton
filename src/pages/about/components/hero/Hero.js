@@ -12,6 +12,7 @@ const Hero = () => {
       if (window.scrollY > 450) return;
       const x = window.scrollY / 25;
       setpos(x + 42);
+      if (x > 0) setmouseOver([true, true]);
     });
   }, []);
 
