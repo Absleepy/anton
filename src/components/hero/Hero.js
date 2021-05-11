@@ -45,11 +45,10 @@ const Hero = () => {
     document.addEventListener("scroll", () => {
       const gotOffset = window.pageYOffset;
       const totalPos = gotOffset / 100 + 42;
-      // check if totalPos is greater than or equal to  59
-      // stop totalPos from increasing
-      if (totalPos >= 59) {
-        setRightPos(59);
-        setLeftPos(59);
+      const leastPos = 60;
+      if (totalPos >= leastPos) {
+        setRightPos(leastPos);
+        setLeftPos(leastPos);
       } else {
         setRightPos(totalPos);
         setLeftPos(totalPos);
