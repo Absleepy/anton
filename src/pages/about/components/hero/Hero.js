@@ -4,7 +4,7 @@ import Image from '../animated-image/Image';
 const Hero = () => {
   const [boyCount, setBoyCount] = useState(1);
   const [girlCount, setGirlCount] = useState(1);
-  const [mouseOver, setmouseOver] = useState([false, false]);
+  const [mouseOver, setmouseOver] = useState([true, true]);
   const [pos, setpos] = useState(42);
 
   useEffect(() => {
@@ -21,13 +21,13 @@ const Hero = () => {
       let mO = [...mouseOver];
       mO[0] = leave;
       setmouseOver(mO);
-      return setBoyCount((c) => (c > 3 ? 1 : c + 1));
+      return setBoyCount((c) => (c > 3 ? 2 : c + 1));
     }
 
     let mO = [...mouseOver];
     mO[1] = leave;
     setmouseOver(mO);
-    return setGirlCount((c) => (c > 3 ? 1 : c + 1));
+    return setGirlCount((c) => (c > 3 ? 2 : c + 1));
   };
 
   return (
