@@ -1,8 +1,13 @@
 import React from "react";
 import style from "./style.module.css";
-const GirlImage = ({ url, handleGirlMouseOver, handleGirlMouseLeave }) => {
+const GirlImage = ({
+  leftPos,
+  url,
+  handleGirlMouseOver,
+  handleGirlMouseLeave,
+}) => {
   return (
-    <div className={style.container}>
+    <div style={{ left: `${leftPos}%` }} className={style.container}>
       <img src={url} alt="Girl" width="100%" height="auto" />
       <div
         onMouseLeave={handleGirlMouseLeave}

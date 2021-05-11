@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import BoyImage from "../boy-image/BoyImage";
 import GirlImage from "../girl-image/GirlImage";
@@ -8,7 +8,8 @@ const Hero = () => {
   const [BoyMouseIn, setBoyMouseIn] = useState(false);
   const [girlCount, setGirlCount] = useState(1);
   const [GirlMouseIn, setGirlMouseIn] = useState(false);
-
+  const [rightPos, setRightPos] = useState(0);
+  const [leftPos, setLeftPos] = useState(0);
   //  for Boy
   const handleBoyMouseOver = () => {
     setBoyMouseIn(true);
@@ -33,14 +34,39 @@ const Hero = () => {
     setGirlMouseIn(false);
   };
 
+  //  when user scroll down
+  useEffect(() => {
+    // set position when page is loaded
+    const gotOffset = window.pageYOffset;
+    const totalPos = gotOffset / 100 + 42;
+    setRightPos(totalPos);
+    setLeftPos(totalPos);
+    // change position on scroll
+    document.addEventListener("scroll", () => {
+      const gotOffset = window.pageYOffset;
+      const totalPos = gotOffset / 100 + 42;
+      // check if totalPos is greater than or equal to  59
+      // stop totalPos from increasing
+      if (totalPos >= 59) {
+        setRightPos(59);
+        setLeftPos(59);
+      } else {
+        setRightPos(totalPos);
+        setLeftPos(totalPos);
+      }
+    });
+  }, []);
+
   return (
     <>
       <BoyImage
+        rightPos={rightPos}
         handleBoyMouseLeave={handleBoyMouseLeave}
         handleBoyMouseOver={handleBoyMouseOver}
         url={`./assets/images/boy${!BoyMouseIn ? 1 : boyCount}.png`}
       />
       <GirlImage
+        leftPos={leftPos}
         handleGirlMouseLeave={handleGirlMouseLeave}
         handleGirlMouseOver={handleGirlMouseOver}
         url={`./assets/images/girl${!GirlMouseIn ? 1 : girlCount}.png`}
