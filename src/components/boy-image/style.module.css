@@ -1,0 +1,18 @@
+.container {
+  position: fixed;
+  z-index: 60;
+  bottom: 0;
+  box-sizing: border-box;
+  transform-origin: 50% 100%;
+  text-align: center;
+  width: 249.66px;
+  right: 48.4989%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  margin-right: 100px;
+  right: 48.5%;
+  height: 88.2%;
+  transform-origin: 100% 100%;
+  width: 497.19px;
+  right: 37.4989%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}

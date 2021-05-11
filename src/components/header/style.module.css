@@ -1,0 +1,26 @@
+.logo {
+  position: fixed;
+  z-index: 900;
+  top: 3px;
+  left: 16px;
+  color: #1a1a1a;
+  font: normal 18px/1.44 A\&ICircular, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.03em;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transform: translateZ(0);
+}
+.logo a {
+  display: block;
+  padding: 25px;
+  color: #1a1a1a;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+}

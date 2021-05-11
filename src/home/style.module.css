@@ -1,0 +1,11 @@
+.main {
+  position: relative;
+  padding-top: 100vh;
+  padding-bottom: 65vh;
+  /* color: #fff; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 50;
+}
