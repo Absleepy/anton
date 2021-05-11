@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.css";
 const TextContent = () => {
   return (
-    <div>
+    <div id="textContent">
       <div className={style.container}>
         <div className={style.textContainer}>
           <div className={style.text}>
