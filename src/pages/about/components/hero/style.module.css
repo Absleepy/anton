@@ -1,1 +1,26 @@
-
+.arrContainer {
+  position: fixed;
+  z-index: 99;
+  bottom: -25px;
+  left: 50%;
+  width: 140px;
+  margin-left: -70px;
+  height: 120px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: upDown 0.5s infinite alternate;
+  -webkit-animation: upDown 0.5s infinite alternate;
+}
+@keyframes upDown {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.hide {
+  display: none;
+}

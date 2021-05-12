@@ -5,8 +5,8 @@ const Image = ({ url, handleMouse, pos }) => {
     <div className={style.container} style={pos}>
       <img src={url} alt="Person" width="100%" height="auto" />
       <div
-        onMouseEnter={handleMouse}
-        onMouseLeave={handleMouse}
+        onMouseEnter={() => handleMouse(false)}
+        onMouseLeave={() => handleMouse(true)}
         className={style.personChanger}
       ></div>
     </div>
