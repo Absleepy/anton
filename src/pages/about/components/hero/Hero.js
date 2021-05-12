@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Image from "../animated-image/Image";
-import Arrow from "./Arrow";
-import style from "./style.module.css";
+import React, { useState, useEffect } from 'react';
+import Image from '../animated-image/Image';
+import Arrow from './Arrow';
+import style from './style.module.css';
 const Hero = () => {
   const [boyCount, setBoyCount] = useState(1);
   const [girlCount, setGirlCount] = useState(1);
@@ -9,7 +9,7 @@ const Hero = () => {
   const [showArrow, setShowArrow] = useState(true);
   const [pos, setpos] = useState(38);
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 550) return setShowArrow(false);
       setShowArrow(window.scrollY > 430 ? false : true);
       const x = window.scrollY / 25;
@@ -20,7 +20,7 @@ const Hero = () => {
 
   const handleMouse = (type, leave) => {
     if (pos > 38) return;
-    if (type === "boy") {
+    if (type === 'boy') {
       let mO = [...mouseOver];
       mO[0] = leave;
       setmouseOver(mO);
@@ -42,18 +42,18 @@ const Hero = () => {
   return (
     <>
       <Image
-        handleMouse={(leave) => handleMouse("boy", leave)}
+        handleMouse={(leave) => handleMouse('boy', leave)}
         url={`./assets/images/boy${mouseOver[0] ? 1 : boyCount}.png`}
         pos={{ right: `${pos}%` }}
       />
       <Image
-        handleMouse={(leave) => handleMouse("girl", leave)}
+        handleMouse={(leave) => handleMouse('girl', leave)}
         url={`./assets/images/girl${mouseOver[1] ? 1 : girlCount}.png`}
-        pos={{ left: `${pos + 10}%`, height: "77.4%" }}
+        pos={{ left: `${pos + 10}%` }}
       />
       <div
         onClick={arrowClicked}
-        className={`${style.arrContainer} ${!showArrow ? style.hide : ""}`}
+        className={`${style.arrContainer} ${!showArrow ? style.hide : ''}`}
       >
         <Arrow />
       </div>

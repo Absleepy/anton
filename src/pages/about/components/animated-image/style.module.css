@@ -5,13 +5,10 @@
   box-sizing: border-box;
   transform-origin: 50% 100%;
   text-align: center;
-  width: 249.66px;
-  right: 48.4989%;
   transform: matrix(1, 0, 0, 1, 0, 0);
   margin-right: 100px;
-  height: 88.2%;
+  height: 80%;
   transform-origin: 100% 100%;
-  width: 497.19px;
   right: 37.4989%;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
@@ -23,3 +20,15 @@
   bottom: 0;
   height: 100%;
 }
+
+/* @media (max-width: 700px) {
+  .container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    right: 0%;
+    left: 0%;
+    top: 10%;
+  }
+} */
