@@ -43,12 +43,12 @@ const Hero = () => {
     <>
       <Image
         handleMouse={(leave) => handleMouse('boy', leave)}
-        url={`./assets/images/boy${mouseOver[0] ? 1 : boyCount}.png`}
+        url={`/assets/images/boy${mouseOver[0] ? 1 : boyCount}.png`}
         pos={{ right: `${pos}%` }}
       />
       <Image
         handleMouse={(leave) => handleMouse('girl', leave)}
-        url={`./assets/images/girl${mouseOver[1] ? 1 : girlCount}.png`}
+        url={`/assets/images/girl${mouseOver[1] ? 1 : girlCount}.png`}
         pos={{ left: `${pos + 10}%` }}
       />
       <div
